@@ -2,6 +2,7 @@ public class Items {
     private String name;
     private Double price;
     private Integer stock = 10;
+    private Integer quantity = 0;
 
 
 
@@ -14,6 +15,13 @@ public class Items {
         this.price = price;
     }
 
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity() {
+        this.quantity++;
+    }
 
     public String getName() {
         return name;
@@ -24,7 +32,7 @@ public class Items {
     }
 
     public Double getPrice() {
-        return price;
+            return price;
     }
 
     public void setPrice(Double price) {
@@ -40,13 +48,13 @@ public class Items {
     }
 
 
-
     @Override
-        public String toString() {
-            return "Items{" +
-                    "name='" + name + '\'' +
-                    ", price=" + price +
-                    ", stock=" + stock +
-                    '}';
+    public String toString() {
+        return "Items{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", stock=" + stock +
+                ", quantity=" + quantity +
+                '}';
     }
 }
