@@ -16,16 +16,30 @@ public class Main {
         ShoppingCart1.addProduct(Pen);
         ShoppingCart1.addProduct(Pen);
         ShoppingCart1.addProduct(Laptop);
-        ShoppingCart1.addProduct(Pen);
+        ShoppingCart1.addProduct(Laptop);
+        ShoppingCart1.addProduct(Laptop);
+        ShoppingCart1.addProduct(Laptop);
+
         ShoppingCart1.addProduct(Bike);
         ShoppingCart1.addProduct(Bike);
-        ShoppingCart1.addProduct(Bike);
+
+
 
         System.out.println(ShoppingCart1.getProducts());
         System.out.println(ShoppingCart1.getPrice());
         System.out.println(ShoppingCart1.getListOfProducts());
+        System.out.println(ShoppingCart1.getOff());
+
+        ShoppingCart1.setFinalPrice();
+        System.out.println("Final price is: " + ShoppingCart1.getFinalPrice());
+
+
+
+
+
 
 
 
     }
+
 }

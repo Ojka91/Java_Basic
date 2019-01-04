@@ -6,8 +6,9 @@ public class Cart {
     private Double price = 0.0;
     private ArrayList<Items> products = new ArrayList<Items>();
     private ArrayList<Items> listOfProducts = new ArrayList<Items>();
-//    private Double off = 0.0;
-//    private Double finalPrice = 0.0;
+    private Double off = 0.0;
+    private Double finalPrice = 0.0;
+
 
 
     public Cart(){
@@ -32,6 +33,7 @@ public class Cart {
             setPrice(product.getPrice());
             addList(product);
             product.setQuantity();
+            setOff(product);
         }else {
             System.out.println("No more products left");
         }
@@ -45,6 +47,8 @@ public class Cart {
         }
     }
 
+
+
     public Double getPrice() {
         return price;
     }
@@ -55,6 +59,23 @@ public class Cart {
        }else{
            this.price += price;
        }
+    }
+
+
+    public Double getOff() {
+        return off;
+    }
+
+    public void setOff(Items product) {
+        this.off = off + product.getPrice() * (Math.floor(product.getQuantity()/4));
+
+    }
+    public Double getFinalPrice() {
+        return finalPrice;
+    }
+
+    public void setFinalPrice() {
+        this.finalPrice =  price - off;
     }
 
     public ArrayList<Items> getProducts() {
